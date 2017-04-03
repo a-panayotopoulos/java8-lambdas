@@ -1,4 +1,4 @@
-package com.mastercard.edi.lambdas.axp.ch1;
+package com.lambdaherding.edi.axp.ch01;
 
 public class HelloWorld {
 	public static void main( String... grr_args ) {
