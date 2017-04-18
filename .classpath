@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/test-classes" path="src/axp/java-test"/>
 	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/axp/java"/>
         <classpathentry kind="src" output="target/classes" path="src/qli/java"/>
+	<classpathentry excluding="resources/" kind="src" path="src/pxd"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 	<classpathentry kind="output" path="target/test-classes"/>
