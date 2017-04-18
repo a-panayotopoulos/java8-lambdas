@@ -34,6 +34,7 @@ public class PersonFunctions {
 	public static Person hasBeenWorkingLongest() {
 		return Person.peeps()
 				.filter( p -> p.isCurrentlyEmployed() )
-				.reduce( null, (p1, p2) -> ( ( p1 == null ) || p1.startedAfter( p2 ) ) ? p2 : p1 );
+				.reduce( (p1, p2) -> p1.startedAfter( p2 ) ? p2 : p1 )
+				.orElse( null );
 	}
 }
