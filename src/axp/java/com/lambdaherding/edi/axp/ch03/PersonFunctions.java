@@ -3,6 +3,7 @@ package com.lambdaherding.edi.axp.ch03;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
+import com.lambdaherding.edi.ch03.Person;
 
 public class PersonFunctions {
 	public static List<String> lastNameFirstName() {

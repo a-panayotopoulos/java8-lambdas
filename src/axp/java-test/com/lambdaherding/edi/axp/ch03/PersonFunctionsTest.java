@@ -2,6 +2,7 @@ package com.lambdaherding.edi.axp.ch03;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
@@ -10,23 +11,26 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.lambdaherding.edi.ch03.Person;
+
+/**
+ * Tests over {@link PersonFunctions}
+ */
 @SuppressWarnings("static-method")
 public class PersonFunctionsTest {
-	private static void assertPeopleByName( Iterable<String> expectedNames, Iterable<Person> actualPeople ) {
+	private static void assertPeopleByName( String[] expectedNames, Iterable<Person> actualPeople ) {
+		assertNotNull( "Null peeps", actualPeople );
+
 		Iterator<Person> it = actualPeople.iterator();
-		
+
 		for ( String name : expectedNames ) {
 			assertTrue( "Expected more people", it.hasNext() );
 			assertEquals( name, it.next().firstName() );
 		}
-		
+
 		assertFalse( "More people than expected", it.hasNext() );
 	}
-	
-	private static void assertPeopleByName( String[] expectedNames, Iterable<Person> actualPeople ) {
-		assertPeopleByName( Arrays.asList( expectedNames ), actualPeople );
-	}
-	
+
 	@Test
 	public void testLastNameFirstName() {
 		List<String> expected = Arrays.asList( new String[] {
@@ -48,11 +52,15 @@ public class PersonFunctionsTest {
 
 	@Test
 	public void testShortestNameOverall() {
-		assertEquals( "Bob", PersonFunctions.shortestNameOverall().firstName() );
+		Person withShortestName = PersonFunctions.shortestNameOverall();
+		assertNotNull( "Null peep", withShortestName );
+		assertEquals( "Bob", withShortestName.firstName() );
 	}
 
 	@Test
 	public void testHasBeenWorkingLongest() {
-		assertEquals( "Dave", PersonFunctions.hasBeenWorkingLongest().firstName() );
+		Person longestInBusiness = PersonFunctions.hasBeenWorkingLongest();
+		assertNotNull( "Null peep", longestInBusiness );
+		assertEquals( "Dave", longestInBusiness.firstName() );
 	}
 }
