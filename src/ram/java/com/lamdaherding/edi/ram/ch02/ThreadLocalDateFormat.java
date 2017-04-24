@@ -6,6 +6,9 @@ import java.util.Date;
 
 public class ThreadLocalDateFormat {
 
+	// https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html
+	// https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
+	// 
 	// Long way to do it:
 	//
 	// private static Supplier<DateFormat> DFSUPPLIER = () -> new SimpleDateFormat("dd-MMM-yyyy");
