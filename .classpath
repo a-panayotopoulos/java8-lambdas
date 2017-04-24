@@ -5,6 +5,7 @@
 	<classpathentry kind="src" output="target/classes" path="src/axp/java"/>
         <classpathentry kind="src" output="target/classes" path="src/qli/java"/>
 	<classpathentry excluding="resources/" kind="src" path="src/pxd"/>
+	<classpathentry kind="src" output="target/classes" path="src/mssw/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 	<classpathentry kind="output" path="target/test-classes"/>
