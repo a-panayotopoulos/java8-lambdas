@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
-	<classpathentry kind="src" output="target/classes" path="src/ram/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/abs/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/ard/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/axp/java"/>
 	<classpathentry kind="src" output="target/test-classes" path="src/axp/java-test"/>
-	<classpathentry kind="src" output="target/classes" path="src/qli/java"/>
-	<classpathentry excluding="resources/" kind="src" path="src/pxd"/>
+        <classpathentry kind="src" output="target/classes" path="src/drjt/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/dtj/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/mdw/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/mssw/java"/>
+	<classpathentry excluding="resources/" kind="src" path="src/pxd"/>
+	<classpathentry kind="src" output="target/classes" path="src/qli/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/ram/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/red/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/slc/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/svv/java"/>
+	<classpathentry kind="src" output="target/classes" path="src/wpb/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
