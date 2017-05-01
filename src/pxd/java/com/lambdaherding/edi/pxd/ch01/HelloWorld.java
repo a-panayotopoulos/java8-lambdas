@@ -1,4 +1,4 @@
-package java.com.labdaherding.edi.pxd.ch01;
+package com.lambdaherding.edi.pxd.ch01;
 
 public class HelloWorld {
 
