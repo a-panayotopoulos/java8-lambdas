@@ -10,7 +10,10 @@ import java.util.Date;
  * This class is not thread-safe! Turn the static formatter into a ThreadLocal version of it,
  * using lambdas for simplicity.
  * 
- * Comparrison Output:
+ * Comparison Output:
+ *
+ * Of course you'll get different results between runs,  but the important part is that we have
+ * 4 01-04-2017 entries 2 01-03-2017 entries and a single 02-03-2017 entry when they should all be unique.
  * 
  * Thread safe:
  * <code>
@@ -23,12 +26,14 @@ import java.util.Date;
  * </code>
  * 
  * Not thread safe:
+ * <code>
  * 01-03-2017
  * 02-03-2017
  * 01-03-2017
  * 01-04-2017
  * 01-04-2017
  * 01-04-2017
+ * </code>
  */
 public class ThreadLocalExample {
 	private static final SimpleDateFormat FORMATTER = new SimpleDateFormat( "dd-MM-yyyy" );
