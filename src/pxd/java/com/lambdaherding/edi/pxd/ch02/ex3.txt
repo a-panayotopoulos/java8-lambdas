@@ -1,0 +1,5 @@
+3a.    Yes
+
+3b.    Yes
+
+3c.    The expression can be inferred as either of the overloaded types.

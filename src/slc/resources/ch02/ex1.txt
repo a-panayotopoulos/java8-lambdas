@@ -1,0 +1,4 @@
+1. T -> apply -> R
+2. Square root, square, factorial
+3. - x -> x + 1;
+   - x -> x == 1;
