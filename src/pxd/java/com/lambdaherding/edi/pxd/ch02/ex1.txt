@@ -1,0 +1,5 @@
+1a.    T -> (Function apply ) -> R
+
+1b.    Operations like -arithmetic, logarithmic, square root, trigonometric etc.
+
+1c.     x -> x + 1
