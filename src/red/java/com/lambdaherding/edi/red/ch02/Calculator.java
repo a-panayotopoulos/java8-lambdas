@@ -12,8 +12,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-import com.lambdaherding.edi.ch02.Calculate;
-
 public class Calculator extends JFrame {
 
 	private static final long serialVersionUID = 3809823621528950529L;
@@ -169,6 +167,6 @@ public class Calculator extends JFrame {
 	}
 
 	public static void main( String[] args ) {
-		new Calculate().setVisible( true );
+		new Calculator().setVisible( true );
 	}
 }
