@@ -9,6 +9,31 @@ import java.util.Date;
 /**
  * This class is not thread-safe! Turn the static formatter into a ThreadLocal version of it,
  * using lambdas for simplicity.
+ * 
+ * Comparison Output:
+ *
+ * Of course you'll get different results between runs,  but the important part is that we have
+ * 4 01-04-2017 entries 2 01-03-2017 entries and a single 02-03-2017 entry when they should all be unique.
+ * 
+ * Thread safe:
+ * <code>
+ * 02-03-2017
+ * 01-03-2017
+ * 01-04-2017
+ * 03-03-2017
+ * 30-06-2064
+ * 30-09-2111
+ * </code>
+ * 
+ * Not thread safe:
+ * <code>
+ * 01-03-2017
+ * 02-03-2017
+ * 01-03-2017
+ * 01-04-2017
+ * 01-04-2017
+ * 01-04-2017
+ * </code>
  */
 public class ThreadLocalExample {
 	private static final SimpleDateFormat FORMATTER = new SimpleDateFormat( "dd-MM-yyyy" );
@@ -22,7 +47,12 @@ public class ThreadLocalExample {
 	}
 
 	public static void main( String[] args ) {
-		ThreadLocalExample.show( 31, Month.MARCH, 2017 );
-		ThreadLocalExample.show( 1491004800_000L );
+		for ( int i = 1; i <= 3; i++ ) {
+			final int day = i; // Must be final or effectively final!
+			new Thread( () -> {
+				ThreadLocalExample.show( day, Month.MARCH, 2017 );
+				ThreadLocalExample.show( 1491004800_000L * new Long(day) ); // little bit silly, but shows up nicely in the comparative output
+			}).start();
+		}
 	}
 }
