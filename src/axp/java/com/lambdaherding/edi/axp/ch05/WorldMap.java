@@ -39,11 +39,9 @@ public class WorldMap {
 	}
 
 	public void mergeDataFrom( WorldMap other ) {
-		for ( Entry<String, HashSet<String>> entry : other.containing.entrySet() ) {
-			containing.merge( entry.getKey(), entry.getValue(), (s, t) -> {
-				s.addAll( t );
-				return s;
-			});
-		}
+		other.containing.forEach( (key, val) -> containing.merge( key,  val, (thisSet, otherSet) -> {
+			thisSet.addAll( otherSet );
+			return thisSet;
+		}) );
 	}
 }
