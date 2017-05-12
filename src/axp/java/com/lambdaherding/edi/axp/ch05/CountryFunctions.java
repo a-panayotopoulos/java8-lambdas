@@ -27,7 +27,6 @@ import java.util.stream.Stream;
 
 import com.lambdaherding.edi.ch05.Continent;
 import com.lambdaherding.edi.ch05.Country;
-import com.lambdaherding.edi.ch05.WorldMap;
 
 public class CountryFunctions {
 	/**

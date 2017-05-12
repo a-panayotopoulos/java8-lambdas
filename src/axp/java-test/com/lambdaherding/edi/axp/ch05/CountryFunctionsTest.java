@@ -18,7 +18,6 @@ import org.junit.Test;
 import com.lambdaherding.edi.ch05.Continent;
 import com.lambdaherding.edi.ch05.Countries;
 import com.lambdaherding.edi.ch05.Country;
-import com.lambdaherding.edi.ch05.WorldMap;
 
 @SuppressWarnings("static-method")
 public class CountryFunctionsTest {
