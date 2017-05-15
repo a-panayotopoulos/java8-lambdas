@@ -1,4 +1,4 @@
-package com.lambdaherding.edi.ch02;
+package com.lambdaherding.edi.mdw.ch02;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
