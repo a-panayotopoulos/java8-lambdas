@@ -18,7 +18,7 @@ public class ForEach {
 
 	public Optional<String> mostLowerString(List<String> list) {
 		return list.stream()
-				.min(Comparator.comparing(str -> getLowerCaseCounter(str)) );
+				.min(Comparator.comparing(str -> getLowerCaseCounter(str)) ); 
 	}
 
 
