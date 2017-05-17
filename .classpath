@@ -3,6 +3,7 @@
 	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/abs/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/axp/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/axp/java-test"/>
 	<classpathentry kind="src" output="target/classes" path="src/drjt/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/dtj/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/mdw/java"/>
