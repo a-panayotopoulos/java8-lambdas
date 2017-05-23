@@ -40,7 +40,7 @@ public class TestPerformance {
 	public void testGetAllMusicians() {
 		List<String> everyone = Arrays.asList( new String[] {
 				"John Coltrane", "John Lennon", "The Beatles", "John Lennon",
-				"Ringo Starr", "Paul McCartney", "George Harrison" } );
+				"Paul McCartney", "George Harrison", "Ringo Starr" } );
 
 		// TODO: This doesn't work. Needs to be getAllMusicians()
 		assertEquals( everyone, performance.getMusicians().map( a -> a.getName() ).collect( Collectors.toList() ) );
