@@ -18,7 +18,7 @@ public class CommonStreamOps {
 	// 2. A function that takes in artists and returns a list of strings with their names and places of origin
 	public static List<String> artistOrigins( Stream<Artist> artists ) {
 		return artists
-			.map( a -> a.名前() + ": " + a.出身() )
+			.map( a -> a.namae() + ": " + a.shusshin() )
 			.collect( Collectors.toList() );
 	}
 
@@ -90,26 +90,26 @@ public class CommonStreamOps {
 	}
 
 	public static class Artist {
-		private String 出身;
-		private String 名前;
+		private String shusshin;
+		private String namae;
 		private List<Artist> members = new ArrayList<>();
 
-		public Artist 名前( String 名前 ) {
-			this.名前 = 名前;
+		public Artist namae( String namae ) {
+			this.namae = namae;
 			return this;
 		}
 
-		public String 名前() {
-			return 名前;
+		public String namae() {
+			return namae;
 		}
 
-		public Artist 出身( String 出身 ) {
-			this.出身 = 出身;
+		public Artist shusshin( String shusshin ) {
+			this.shusshin = shusshin;
 			return this;
 		}
 
-		public String 出身() {
-			return 出身;
+		public String shusshin() {
+			return shusshin;
 		}
 
 		public Artist member( Artist member ) {
@@ -122,7 +122,7 @@ public class CommonStreamOps {
 		}
 
 		public boolean isFrom( String location ) {
-			return 出身 != null && location.equals( 出身 );
+			return shusshin != null && location.equals( shusshin );
 		}
 	}
 
