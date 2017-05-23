@@ -1,4 +1,4 @@
-package com.lambda.edi.common;
+package com.lambdaherding.edi.ch04;
 
 import java.util.stream.Stream;
 

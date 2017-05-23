@@ -1,4 +1,4 @@
-package com.lambda.edi.common;
+package com.lambdaherding.edi.ch04;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class Artists {
         return artists.get(index);
     }
 
-    private void indexException(int index) {
+    private static void indexException(int index) {
         throw new IllegalArgumentException(index + 
                                            " doesn't correspond to an Artist");
     }

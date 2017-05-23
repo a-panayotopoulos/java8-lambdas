@@ -3,7 +3,7 @@
  * and open the template in the editor.
  */
 
-package com.lambda.edi.common;
+package com.lambdaherding.edi.ch04;
 
 /**
  * @author richard
