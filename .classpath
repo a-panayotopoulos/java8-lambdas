@@ -8,6 +8,7 @@
 	<classpathentry kind="src" output="target/classes" path="src/dtj/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/mdw/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/mssw/java"/>
+	<classpathentry kind="src" path="src/mssw/test"/>
 	<classpathentry kind="src" output="target/classes" path="src/qli/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/ram/java"/>
 	<classpathentry kind="src" output="target/classes" path="src/red/java"/>
