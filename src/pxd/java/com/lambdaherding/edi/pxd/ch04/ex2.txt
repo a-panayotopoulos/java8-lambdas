@@ -1,0 +1,3 @@
+Q. Based on the resolution rules described earlier, can you ever override equals or hashCode in a default method?
+
+A. No, equals and hashcode are defined on the Object in a class and the class takes precedence
