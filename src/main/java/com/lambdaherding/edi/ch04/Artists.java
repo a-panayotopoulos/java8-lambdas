@@ -31,4 +31,7 @@ public class Artists {
         }
     }
 
+	public List<Artist> getArtists() {
+		return artists;
+	}
 }
