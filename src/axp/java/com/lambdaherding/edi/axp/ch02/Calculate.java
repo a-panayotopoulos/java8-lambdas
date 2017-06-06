@@ -73,7 +73,10 @@ public class Calculate extends JFrame {
 	}
 	
 	public JButton inputButton( String label ) {
-		return button( label, e -> addToDisplay( label ) );
+		return button( label, e -> {
+			addToDisplay( label );
+			number.append( label );
+		});
 	}
 	
 	public JButton commaButton() {
