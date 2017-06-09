@@ -6,7 +6,7 @@ import java.util.function.Function;
 /**
  * Benchmark some runnable method.
  */
-public class Benchmark {
+public interface Benchmark {
 	/**
 	 * Benchmark a method which requires no input
 	 * @param runnable the method to test
