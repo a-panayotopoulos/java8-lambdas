@@ -24,14 +24,7 @@ public class TestPerformance {
 
 			@Override
 			public Stream<Artist> getMusicians() {
-				return Stream.of(
-					new Musician( "Elton John" ),
-					new Group( "The Beatles" )
-						.addMember( new Musician( "John Lennon" ) )
-						.addMember( new Musician( "Ringo Starr" ) )
-						.addMember( new Musician( "Paul McCartney" ) )
-						.addMember( new Musician( "George Harrison" ) ),
-					new Musician( "David Bowie" ) );
+				return SampleData.threeArtists();
 			}
 		};
 	}
@@ -39,14 +32,15 @@ public class TestPerformance {
 	@Test
 	public void testGetMusicians() {
 		assertEquals(
-				Arrays.asList( new String[] { "Elton John", "The Beatles", "David Bowie" } ),
+				Arrays.asList( new String[] { "John Coltrane", "John Lennon", "The Beatles" } ),
 				performance.getMusicians().map( a -> a.getName() ).collect( Collectors.toList() ) );
 	}
 
 	@Test
 	public void testGetAllMusicians() {
 		List<String> everyone = Arrays.asList( new String[] {
-				"Elton John", "The Beatles", "John Lennon", "Ringo Starr", "Paul McCartney", "George Harrison", "David Bowie" } );
+				"John Coltrane", "John Lennon", "The Beatles", "John Lennon",
+				"Paul McCartney", "George Harrison", "Ringo Starr" } );
 
 		// TODO: This doesn't work. Needs to be getAllMusicians()
 		assertEquals( everyone, performance.getMusicians().map( a -> a.getName() ).collect( Collectors.toList() ) );
