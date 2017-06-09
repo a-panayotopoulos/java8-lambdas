@@ -1,0 +1,2 @@
+1. Eager
+2. Lazy

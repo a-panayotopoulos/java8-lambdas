@@ -57,7 +57,7 @@ public class PersonFunctionsTest {
 
 	@Test
 	public void testHasBeenWorkingLongest() {
-		Person longestInBusiness = PersonFunctions.shortestNameOverall();
+		Person longestInBusiness = PersonFunctions.hasBeenWorkingLongest();
 		assertNotNull( "Null peep", longestInBusiness );
 		assertEquals( "Dave", longestInBusiness.firstName() );
 	}
