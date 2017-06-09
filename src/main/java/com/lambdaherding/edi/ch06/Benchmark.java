@@ -1,4 +1,4 @@
-package com.lambdaherding.edi.axp.ch06;
+package com.lambdaherding.edi.ch06;
 
 import java.util.function.Consumer;
 import java.util.function.Function;

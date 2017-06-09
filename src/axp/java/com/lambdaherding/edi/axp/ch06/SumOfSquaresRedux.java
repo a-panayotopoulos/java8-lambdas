@@ -6,6 +6,8 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import com.lambdaherding.edi.ch06.Benchmark;
+
 /**
  * Exercise 3: sum of squares, redux
  */
