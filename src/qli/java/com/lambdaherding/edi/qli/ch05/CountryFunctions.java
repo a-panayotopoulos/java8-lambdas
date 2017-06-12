@@ -1,9 +1,7 @@
 package com.lambdaherding.edi.qli.ch05;
 
-import java.util.Collections;
 import java.util.Map;
 import java.util.Properties;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -63,7 +61,12 @@ public class CountryFunctions {
 	 * @param props an empty properties file
 	 */
 	public static void writeToProperties( Stream<Country> countries, Properties props ) {
-		// TODO
+		
+		countries.collect(Collectors.groupingBy(Country::continent))
+				 .forEach( (k, v) -> {
+					props.put( k.name(), 
+						v.stream().map(Country::name).collect(Collectors.joining(":")));
+				});
 	}
 
 	/**
@@ -74,7 +77,12 @@ public class CountryFunctions {
 	 * @param props an empty properties file
 	 */
 	public static void writeToPropertiesSorted( Stream<Country> countries, Properties props ) {
-		// TODO
+		
+		countries.collect(Collectors.groupingBy(Country::continent))
+		 .forEach( (k, v) -> {
+			props.put( k.name(), 
+				v.stream().map(Country::name).sorted().collect(Collectors.joining(":")));
+		});
 	}
 
 	/**
@@ -84,7 +92,8 @@ public class CountryFunctions {
 	 * @return a mapping of String (continent name) to {@link Country}
 	 */
 	public static Map<String, Country> firstAlphabeticallyForEachContinent( Stream<Country> countries ) {
-		return null; // TODO
+		// countries.collect( Collectors.groupingBy( Country::continent) );
+		return null; //TODO
 	}
 
 	/**
@@ -93,7 +102,9 @@ public class CountryFunctions {
 	 * @param countries a list of countries
 	 * @return a fully-populated {@link WorldMap} object
 	 */
-	public static WorldMap buildWorldMap( Stream<Country> countries ) {
-		return null; // TODO
+	public static WorldMap buildWorldMap(Stream<Country> countries) {
+		WorldMap map = new WorldMap();
+		countries.forEach(c -> map.add(c));
+		return map;
 	}
 }
