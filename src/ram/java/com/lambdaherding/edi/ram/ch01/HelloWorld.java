@@ -1,4 +1,4 @@
-package com.lamdaherding.edi.ram.ch01;
+package com.lambdaherding.edi.ram.ch01;
 
 import java.util.function.BinaryOperator;
 

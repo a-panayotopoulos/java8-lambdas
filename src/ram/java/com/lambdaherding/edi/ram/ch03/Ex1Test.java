@@ -1,4 +1,4 @@
-package com.lamdaherding.edi.ram.ch03;
+package com.lambdaherding.edi.ram.ch03;
 
 import static org.junit.Assert.assertEquals;
 

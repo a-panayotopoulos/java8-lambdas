@@ -1,4 +1,4 @@
-package com.lamdaherding.edi.ram.ch02;
+package com.lambdaherding.edi.ram.ch02;
 
 import java.util.function.Function;
 

@@ -1,4 +1,4 @@
-package com.lamdaherding.edi.ram.ch04;
+package com.lambdaherding.edi.ram.ch04;
 
 import java.util.List;
 import java.util.Optional;
