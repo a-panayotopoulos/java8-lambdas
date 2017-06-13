@@ -1,4 +1,4 @@
-package com.lambdaherding.edi.drjt.ch05;
+package com.lambdaherding.edi.dtj.ch05;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
