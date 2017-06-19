@@ -1,5 +1,7 @@
 package com.lambdaherding.edi.mssw.ch05;
 
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -12,6 +14,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class Question1 {
 
+    @Test
     public void mapToUpperCase(){
         List<String> collected = Stream.of("a", "b", "hello")
                 .map(String::toUpperCase)
@@ -19,4 +22,8 @@ public class Question1 {
 
         assertEquals(Arrays.asList("A", "B", "HELLO"), collected);
     }
+
+
+
+
 }
