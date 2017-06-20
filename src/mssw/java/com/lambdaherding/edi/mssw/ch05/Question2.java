@@ -21,4 +21,10 @@ public final class Question2 {
 
         System.out.println("Longest name: " + longestName);
     }
+
+    public void kjlsdhf(){
+        Stream<String> names = Stream.of("John", "Paul", "George", "John", "Paul", "John");
+
+//        names
+    }
 }
