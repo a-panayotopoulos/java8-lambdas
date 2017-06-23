@@ -1,5 +1,6 @@
 package com.lambdaherding.edi.mssw.ch05;
 
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,9 +23,14 @@ public final class Question2 {
         System.out.println("Longest name: " + longestName);
     }
 
-    public void kjlsdhf(){
+    public void numberOfOccurrences(){
         Stream<String> names = Stream.of("John", "Paul", "George", "John", "Paul", "John");
 
-//        names
+//        Map<String, List<String>> collect = names.collect(Collectors.groupingBy(name -> name));
+        Map<String, Integer> collect = names.collect(
+                Collectors.groupingBy((name -> name),
+                        Collectors.reducing(0, (name -> 1), (a, b) -> a + b )));
+
+        System.out.println(collect);
     }
 }
