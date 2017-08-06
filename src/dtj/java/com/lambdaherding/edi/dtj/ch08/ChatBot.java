@@ -58,32 +58,32 @@ public class ChatBot {
 
     public void run()  {
         if (welcomeMessage != null) {
-            System.out.println(welcomeMessage);
+            respond(welcomeMessage);
         }
 
         if (terminalExpression == null) {
             System.err.println("No terminal expression has been defined, you'll have to force exit");
         } else {
-            System.out.println("You can exit by saying: " + terminalExpression);
+            respond("You can exit by saying: " + terminalExpression);
         }
 
         // Main logic loop
         while (true) {
             String input = readInput();
             if (terminalExpression != null && input.contains(terminalExpression)) {
-                System.out.println(shutDownResponse);
+                respond(shutDownResponse);
                 break;
             }
 
             Optional<String> foundMessage = messageMappings.keySet().stream().filter(input::contains).findFirst();
 
             if (foundMessage.isPresent()) {
-                System.out.println(messageMappings.get(foundMessage.get()).build(this::respond, this::readInput));
+                respond(messageMappings.get(foundMessage.get()).build(this::respond, this::readInput));
             } else {
                 String noMappingResponse = this.unknownMessageResponse == null
                         ? "Don't know how to process such a message"
                         : this.unknownMessageResponse;
-                System.out.println(noMappingResponse);
+                respond(noMappingResponse);
             }
         }
 
