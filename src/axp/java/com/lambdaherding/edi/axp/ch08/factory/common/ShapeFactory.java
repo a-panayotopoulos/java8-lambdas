@@ -7,6 +7,7 @@ import com.lambdaherding.edi.axp.ch08.factory.common.shape.Shape;
 /**
  * The base factory interface. This is a Method Factory pattern with the method in question being {@link #create(Point)}.
  */
+@FunctionalInterface
 public interface ShapeFactory {
 	/**
 	 * Abstract method that all concrete implementations must implement
