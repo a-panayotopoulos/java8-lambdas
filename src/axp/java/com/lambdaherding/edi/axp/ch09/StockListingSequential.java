@@ -24,6 +24,9 @@ import com.lambdaherding.edi.axp.ch09.service.StockService;
  * 
  * See {@link StockListingUsingFutures} for a version which uses java Futures
  * for threading.
+ * 
+ * TODO: as an alternative to futures, is it possible to make this threaded purely
+ * via stream methods? What are the advantages and disadvantages of each technique?
  */
 public class StockListingSequential {
 	static StockService valuer = new DummyStockService( 1000L );
