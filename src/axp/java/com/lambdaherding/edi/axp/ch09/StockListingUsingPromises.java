@@ -32,7 +32,7 @@ public class StockListingUsingPromises {
 	public static void main( String...args ) {
 		STOCKS.stream()
 			.map( s -> CompletableFuture.supplyAsync( () -> getStockValue( s ), executor ) )
-			.map( f -> f.thenApply( StockListingUsingPromises::getDailyChange ) )
+			.map( f -> f.thenApplyAsync( StockListingUsingPromises::getDailyChange, executor ) )
 			.flatMap( s -> valueInCurrencies( s, USD, GBP, EUR ) )
 			.collect( Collectors.toList() )
 			.forEach( CompletableFuture::join );
@@ -44,7 +44,7 @@ public class StockListingUsingPromises {
 
 	public static Stream<CompletableFuture<Stock>> valueInCurrencies( CompletableFuture<Stock> stock, Currency...currencies ) {
 		return Stream.of( currencies )
-			.map( c -> stock.thenApply( s -> fillCurrency( s, c ) ) );
+			.map( c -> stock.thenApplyAsync( s -> fillCurrency( s, c ), executor ) );
 	}
 
 	public static Stock getStockValue( Stock stock ) {
